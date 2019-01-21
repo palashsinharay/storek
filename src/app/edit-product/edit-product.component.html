@@ -1,0 +1,117 @@
+<form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input 
+        required 
+        minlength="3" 
+        ngModel 
+        name="productName" 
+        #productName="ngModel" 
+        id="productName" 
+        type="text" 
+        class="form-control">
+    <div 
+      class="alert alert-danger" 
+      *ngIf="productName.touched && !productName.valid">
+      <div
+        *ngIf="productName.errors.required" 
+        >
+        Product Name is required
+      </div>
+      <div 
+        *ngIf="productName.errors.minlength" 
+        >
+        Product Name should me minimum {{productName.errors.minlength.requiredLength}} characters
+      </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        required
+        ngModel 
+        name="description" 
+        #description="ngModel" 
+        id="description" 
+        type="text" 
+        class="form-control">
+      <div 
+        class="alert alert-danger" 
+        *ngIf="description.touched && !description.valid">
+      <div *ngIf="description.errors.required">
+          Description is required
+      </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">Imageurl</label>
+      <input
+        required
+        pattern="(https:[/][/]|http:[/][/]|www.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*$" 
+        ngModel 
+        name="imageUrl" 
+        #imageUrl="ngModel" 
+        id="imageUrl" 
+        type="text" 
+        class="form-control">
+      <div 
+      class="alert alert-danger" 
+      *ngIf="imageUrl.touched && !imageUrl.valid">
+      <div *ngIf="imageUrl.errors.required">
+        imageUrl is required
+      </div>
+      <div *ngIf="imageUrl.errors.pattern">
+          Not a valid url 
+       </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          required
+          pattern="^\d{0,2}(\.\d{1,2})?$" 
+          ngModel 
+          name="price" 
+          #price="ngModel" 
+          id="price" 
+          type="text"
+          class="form-control">
+        <div 
+        class="alert alert-danger" 
+        *ngIf="price.touched && !price.valid">
+        <div *ngIf="price.errors.required">
+            Price is required
+        </div>
+        <div *ngIf="price.errors.pattern">
+           Not a valid amount 
+        </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="stock">Stock</label>
+        <input
+          required
+          pattern="^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$" 
+          ngModel
+          min='1'
+          max='99'
+          step='1' 
+          name="stock" 
+          #stock="ngModel" 
+          id="stock" 
+          type="text" 
+          class="form-control" (change)="log(stock)">
+        <div 
+        class="alert alert-danger" 
+        *ngIf="stock.touched && !stock.valid">
+        <div *ngIf="stock.errors.required">
+            Stock is required
+        </div>
+        <div *ngIf="stock.errors.pattern">
+            Only integer allowed 
+        </div>
+        </div>
+    </div>
+      <button class="btn btn-primary">Add</button>
+  </form>
+  
