@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'storeking';
-  catagory;
+  category;
   constructor() {
-    this.catagory = {
-    'electronics': ['Mobiles', 'Tablets', 'Washing Machine'],
-    'Baby Care': ['Diapers', 'Baby Cloths'],
-    'Beauty Care': ['Lip care', 'Creams and lotions']
-  };
-    localStorage.setItem('catagory', JSON.stringify(this.catagory));
+    this.category = [
+    {'name' : 'electronics', 'child' : ['Mobiles', 'Tablets', 'Washing Machine']},
+    {'name' : 'Baby Care', 'child': ['Diapers', 'Baby Cloths']},
+    {'name' : 'Beauty Care', 'child': ['Lip care', 'Creams and lotions']}
+  ];
+    localStorage.setItem('category', JSON.stringify(this.category));
   }
 }
