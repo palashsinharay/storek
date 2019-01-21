@@ -8,6 +8,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { HomeComponent } from './home/home.component';
 import { ListProductComponent } from './list-product/list-product.component';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     AddProductComponent,
     EditProductComponent,
     HomeComponent,
-    ListProductComponent
+    ListProductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,10 @@ import { FormsModule } from '@angular/forms';
     {
       path: 'editproduct',
       component: EditProductComponent
+    },
+    {
+      path: 'productdetails',
+      component: ProductDetailsComponent
     }
   ])
   ],

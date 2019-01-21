@@ -1,0 +1,40 @@
+h2{
+    font-size: 24px;
+    color: #5e1212;
+    margin: 0 0 20px 0;
+}
+h3{
+    color: #5e8555;
+    font-size: 20px;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+.list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding: 0;
+    margin: 0;
+    grid-column-gap: 1%;
+}
+
+.list li a{
+    display: block;
+    border: #c17a31 1px solid;
+    background: #eeaa56;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.back{
+    margin: 15px 0;
+    display: inline-block;
+    background: #5e352b;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
