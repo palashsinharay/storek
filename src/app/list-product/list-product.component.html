@@ -5,7 +5,7 @@
     <h3>{{catagory.name}}</h3>
     <ul class="list">
       <li *ngFor="let subcat of catagory.child">
-        <a [routerLink]="'/productsubcat/'+subcat.id">{{subcat.name}} </a>
+        <a [routerLink]="'/productsubcat/'+subcat.id">{{subcat.name}}</a>
       </li>
     </ul>
   </div>

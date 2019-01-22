@@ -37,7 +37,7 @@ import { ProductSubCatComponent } from './product-sub-cat/product-sub-cat.compon
       component: AddProductComponent
     },
     {
-      path: 'editproduct',
+      path: 'editproduct/:pid',
       component: EditProductComponent
     },
     {

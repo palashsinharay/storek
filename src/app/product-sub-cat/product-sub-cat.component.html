@@ -2,7 +2,9 @@
     <a [routerLink]="['/listproduct']" class="back">Back </a>
   <ul>
     <li *ngFor="let item of products">
-      <a *ngIf="item.subCategory == subcat" [routerLink]="'/productdetails/'+item.id">{{item.productName+' '+item.subCategory}}</a>
+      <a *ngIf="item.subCategory == subcat" [routerLink]="'/productdetails/'+item.id">{{item.productName}}</a>
+      
+      <button class="btn btn-primary" *ngIf="item.subCategory == subcat" [routerLink]="'/editproduct/'+item.id">edit</button>
     </li>
   </ul>
 </div>
