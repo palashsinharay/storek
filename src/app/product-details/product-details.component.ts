@@ -8,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
   pid;
-  constructor(private route: ActivatedRoute) { }
+  products;
+  item;
+  constructor(private route: ActivatedRoute) {
+    this.products = JSON.parse(localStorage.getItem('product'));
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.pid = params.get('pid');
+      this.item = this.products.find(t => t.id == this.pid);
+      // console.log(this.pid);
+      // console.log(this.item);
     });
   }
 

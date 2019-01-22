@@ -1,21 +1,21 @@
 <div class="container">
-  <a [routerLink]="['/productsubcat']" class="back">Back </a>
+  <a [routerLink]="'/productsubcat/'+item.subCategory" class="back">Back </a>
   <div class="row">
     <div class="col-md-4">
       <img src="http://www.demo.wdmtech.com/images/stories/virtuemart/product/product_lg_type.jpg" class="img-responsive" />
     </div>
     <div class="col-md-8">
       <p class="head">Product Name</p>
-      <p>Product Name will go here</p>
+      <p>{{item.productName}}</p>
 
       <p class="head">Description </p>
-      <p>Description Name will go here</p>
+      <p>{{item.description}}</p>
 
       <p class="head">Price </p>
-      <p>Price will go here</p>
+      <p>{{item.price}}</p>
 
       <p class="head">Stock </p>
-      <p>2</p>
+      <p>{{item.stock}}</p>
     </div>
   </div>
 </div>
