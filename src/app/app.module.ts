@@ -41,12 +41,12 @@ import { ProductSubCatComponent } from './product-sub-cat/product-sub-cat.compon
       component: EditProductComponent
     },
     {
-      path: 'productdetails',
-      component: ProductDetailsComponent
+      path: 'productsubcat/:subcat',
+      component: ProductSubCatComponent
     },
     {
-      path: 'productsubcat',
-      component: ProductSubCatComponent
+      path: 'productdetails/:pid',
+      component: ProductDetailsComponent
     }
   ])
   ],

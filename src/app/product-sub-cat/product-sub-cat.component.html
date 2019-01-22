@@ -1,6 +1,8 @@
 <div class="container">
     <a [routerLink]="['/listproduct']" class="back">Back </a>
   <ul>
-    <li><a [routerLink]="['/productdetails']">Sub product</a></li>
+    <li *ngFor="let item of products">
+      <a *ngIf="item.subCategory == subcat" [routerLink]="'/productdetails/'+item.id">{{item.productName+' '+item.subCategory}}</a>
+    </li>
   </ul>
 </div>

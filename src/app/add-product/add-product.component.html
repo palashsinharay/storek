@@ -64,7 +64,7 @@
       #subcategory="ngModel" 
       id="subcategory" 
       class="form-control">
-     <option *ngFor="let subCategory of selectedCategory" [ngValue]="subCategory">{{subCategory}}</option>
+     <option *ngFor="let subCategory of selectedCategory" [ngValue]="subCategory.id">{{subCategory.name}}</option>
     </select>
     <div 
       class="alert alert-danger" 
@@ -146,5 +146,8 @@
       </div>
   </div>
     <button class="btn btn-primary" type="submit" [disabled]="!formProduct.valid">Add</button>
-</form>
+<p>
+  {{formProduct.value | json}}
+</p>
+  </form>
 </div>

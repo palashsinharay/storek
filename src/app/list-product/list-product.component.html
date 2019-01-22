@@ -1,12 +1,12 @@
 <div class="container">
   <a [routerLink]="['/']" class="back">Back to home </a>
   <h2>Product List </h2>
-  <div>
-    <h3>Electtronics</h3>
+  <div *ngFor="let catagory of categories">
+    <h3>{{catagory.name}}</h3>
     <ul class="list">
-      <li><a [routerLink]="['/productsubcat']">Mobile </a></li>
-      <li><a>Tablets </a></li>
-      <li><a>Washing machines </a></li>
+      <li *ngFor="let subcat of catagory.child">
+        <a [routerLink]="'/productsubcat/'+subcat.id">{{subcat.name}} </a>
+      </li>
     </ul>
   </div>
 </div>

@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
-  product;
+  item;
+  products;
   categories;
   subCategories;
   selectedCategory;
@@ -27,13 +28,22 @@ export class AddProductComponent implements OnInit {
   // }
 
   submit(frmProduct) {
-    this.product = JSON.parse(localStorage.getItem('product'));
-    if (this.product === null) {
-      this.product = Array(frmProduct.form.value);
+    this.products = JSON.parse(localStorage.getItem('product'));
+    this.item = {
+      'id': this.products == null ? 1 : (this.products.length + 1),
+      'productName': frmProduct.form.value.productName,
+      'description':  frmProduct.form.value.description,
+      'imageUrl':  frmProduct.form.value.imageUrl,
+      'price':  frmProduct.form.value.price,
+      'stock':  frmProduct.form.value.stock,
+      'subCategory': frmProduct.form.value.subCategory
+  };
+    if (this.products === null) {
+      this.products = Array(this.item);
     } else {
-      this.product.push(frmProduct.form.value);
+      this.products.push(this.item);
     }
-    localStorage.setItem('product', JSON.stringify(this.product));
+    localStorage.setItem('product', JSON.stringify(this.products));
   }
 
 }
