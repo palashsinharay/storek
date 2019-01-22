@@ -1,18 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="600" alt="Angular Logo" src="http://storeking.in/wp-content/uploads/2017/12/rural_header_main.gif">
+<div class="main">
+<div class="container padd">
+  <div class="home">  
+    <h1>Product <span>Mart</span></h1>
+      
+    <!-- <div style="text-align:center">
+      <h1>
+        Welcome to {{ title }}!
+      </h1>
+      <img width="600" alt="Angular Logo" src="http://storeking.in/wp-content/uploads/2017/12/rural_header_main.gif">
+    </div> -->
+    <h2>Here are some links to help you start: </h2>
+    <ul class="listhome">
+      <li>
+        <a  [routerLink]="['/listproduct']"  >List of Product</a>
+      </li>
+      <li>
+        <a  [routerLink]="['/addproduct']">Add Product</a>
+      </li>
+    </ul>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a  [routerLink]="['/listproduct']"  >list of Product</a></h2>
-  </li>
-  <li>
-    <h2><a  [routerLink]="['/addproduct']">Add Product</a></h2>
-  </li>
-</ul>
 </div>
