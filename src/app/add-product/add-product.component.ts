@@ -36,7 +36,8 @@ export class AddProductComponent implements OnInit {
       'imageUrl':  frmProduct.form.value.imageUrl,
       'price':  frmProduct.form.value.price,
       'stock':  frmProduct.form.value.stock,
-      'subCategory': frmProduct.form.value.subCategory
+      'subCategory': frmProduct.form.value.subCategory,
+      'Category': frmProduct.form.value.category
   };
     if (this.products === null) {
       this.products = Array(this.item);

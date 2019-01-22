@@ -1,6 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { exists } from 'fs';
 
 @Component({
   selector: 'app-edit-product',
@@ -23,6 +22,7 @@ export class EditProductComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.pid = params.get('pid');
       this.item = this.products.find(t => t.id == this.pid);
+      this.selectedCategory = this.item.Category;
       // console.log(this.pid);
       // console.log(this.item);
     });
