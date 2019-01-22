@@ -24,7 +24,8 @@ export class EditProductComponent implements OnInit {
       this.item = this.products.find(t => t.id == this.pid);
       this.selectedCategory = this.item.Category;
       // console.log(this.pid);
-      // console.log(this.item);
+      console.log(this.item);
+      console.log(this.selectedCategory);
     });
   }
 
@@ -39,7 +40,8 @@ export class EditProductComponent implements OnInit {
       'imageUrl':  frmProduct.form.value.imageUrl,
       'price':  frmProduct.form.value.price,
       'stock':  frmProduct.form.value.stock,
-      'subCategory': frmProduct.form.value.subCategory
+      'subCategory': frmProduct.form.value.subCategory,
+      'Category': this.selectedCategory
   };
   console.log(this.item);
     if (this.products === null) {

@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <div class="form-group">
           <label for="category">category</label>
           <select
@@ -77,10 +77,10 @@
           </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
+    </div> -->
+    <div class="col-md-6">
         <div class="form-group">
-          <label for="subcategory">Sub category</label>
+          <label for="subcategory">Category</label>
           <select
             required
             [ngModel]="item.subCategory" 
@@ -94,7 +94,7 @@
             class="alert alert-danger" 
             *ngIf="subCategory.touched && !subCategory.valid">
           <div *ngIf="subCategory.errors.required">
-            sub category is required
+            category is required
           </div>
           </div>
       </div>
