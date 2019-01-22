@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product',
@@ -12,7 +13,7 @@ export class AddProductComponent implements OnInit {
   categories;
   subCategories;
   selectedCategory;
-  constructor() {
+  constructor(private router: Router) {
     this.categories = JSON.parse(localStorage.getItem('category'));
   }
 
@@ -45,6 +46,7 @@ export class AddProductComponent implements OnInit {
       this.products.push(this.item);
     }
     localStorage.setItem('product', JSON.stringify(this.products));
+    this.router.navigate(['/listproduct']);
   }
 
 }

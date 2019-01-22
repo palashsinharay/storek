@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +13,7 @@ export class EditProductComponent implements OnInit {
   categories;
   subCategories;
   selectedCategory;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
     this.products = JSON.parse(localStorage.getItem('product'));
     this.categories = JSON.parse(localStorage.getItem('category'));
   }
@@ -48,6 +48,7 @@ export class EditProductComponent implements OnInit {
       this.products.splice(this.pid - 1, 1 , this.item);
     }
     localStorage.setItem('product', JSON.stringify(this.products));
+    this.router.navigate(['/listproduct']);
   }
 
 }
