@@ -1,5 +1,8 @@
-<div class="container">
-    <a [routerLink]="['/listproduct']" class="back">Back </a>
+<div class="container padd">
+    <div class="head clearfix">
+      <h2><a [routerLink]="['/listproduct']"><i class="fa fa-chevron-left"></i></a> Sub category product list</h2>
+      <img src="../../assets/logo.png" alt=""/>
+    </div>
   <ul>
     <li *ngFor="let item of products">
       <a *ngIf="item.subCategory == subcat" [routerLink]="'/productdetails/'+item.id">{{item.productName}}</a>
