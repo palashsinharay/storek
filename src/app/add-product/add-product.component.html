@@ -68,6 +68,13 @@
           <option *ngFor="let category of categories" [ngValue]="category.child">{{category.name}}</option>
           </select>
         </div>
+        <div 
+            class="alert alert-danger" 
+            *ngIf="category.touched && !category.valid">
+          <div *ngIf="category.errors.required">
+            Category is required
+          </div>
+          </div>
       </div>  
           
       <div class="col-md-6">    
@@ -77,16 +84,16 @@
             required
             ngModel 
             name="subCategory" 
-            #subcategory="ngModel" 
-            id="subcategory" 
+            #subCategory="ngModel" 
+            id="subCategory" 
             class="form-control">
           <option *ngFor="let subCategory of selectedCategory" [ngValue]="subCategory.id">{{subCategory.name}}</option>
           </select>
           <div 
             class="alert alert-danger" 
-            *ngIf="description.touched && !description.valid">
-          <div *ngIf="description.errors.required">
-            Category is required
+            *ngIf="subCategory.touched && !subCategory.valid">
+          <div *ngIf="subCategory.errors.required">
+            Sub category is required
           </div>
           </div>
         </div>
