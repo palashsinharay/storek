@@ -1,13 +1,7 @@
-h2{
-    font-size: 24px;
-    color: #5e1212;
-    margin: 0 0 20px 0;
-}
 h3{
-    color: #5e8555;
-    font-size: 20px;
-    margin: 0 0 20px;
-    font-weight: bold;
+    color: #201f4e;
+    font-size: 18px;
+    margin: 18px 0 9px;
 }
 .list{
     list-style-type: none;
@@ -20,21 +14,41 @@ h3{
 
 .list li a{
     display: block;
-    border: #c17a31 1px solid;
-    background: #eeaa56;
+    border: #7ab9c0 1px solid;
     border-radius: 5px;
     text-align: center;
-    padding: 10px;
-    color: #fff;
-    font-weight: bold;
+    padding: 9px;
     cursor: pointer;
+    margin-bottom: 9px;
+    color: #7ab9c0;
+    font-size: 14px;
+    font-style: italic;
 }
-.back{
-    margin: 15px 0;
-    display: inline-block;
-    background: #5e352b;
+.list li a:hover{
+    background: #7ab9c0;
     color: #fff;
+    text-decoration: none;
+}
+.padd{padding: 40px 0;}
+.alert{
+    margin-top: 6px;
+    font-size: 12px;
+    padding: 6px;
+}
+.head{
+    margin-bottom: 18px;
+    border-bottom: #ddd 1px solid;
+    padding-bottom: 18px;
+}
+.head img{float: right; height: 22px;}
+.head h2{
+    font-size: 21px; 
+    float: left;
     font-weight: bold;
-    border-radius: 5px;
-    padding: 5px 10px;
+    color: #d4603c;
+}
+.head h2 a{
+    color: #4cbb17; 
+    font-size: 16px; 
+    margin-right: 6px;
 }

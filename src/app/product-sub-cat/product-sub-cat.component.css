@@ -32,5 +32,8 @@ ul a.edit{
 }
 ul a.edit i{font-size: 10px;}
 ul li{
-    padding: 6px 0;
+    padding: 6px 12px;
+}
+ul li:nth-child(even){
+    background: rgba(122, 185, 192, 0.1);
 }
