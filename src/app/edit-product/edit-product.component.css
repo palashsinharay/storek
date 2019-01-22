@@ -1,0 +1,23 @@
+.padd{padding: 40px 0;}
+.alert{
+    margin-top: 6px;
+    font-size: 12px;
+    padding: 6px;
+}
+.head{
+    margin-bottom: 18px;
+    border-bottom: #ddd 1px solid;
+    padding-bottom: 18px;
+}
+.head img{float: right; height: 22px;}
+.head h2{
+    font-size: 21px; 
+    float: left;
+    font-weight: bold;
+    color: #d4603c;
+}
+.head h2 a{
+    color: #4cbb17; 
+    font-size: 16px; 
+    margin-right: 6px;
+}
