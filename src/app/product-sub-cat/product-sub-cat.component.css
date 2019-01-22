@@ -32,6 +32,5 @@ ul a.edit{
 }
 ul a.edit i{font-size: 10px;}
 ul li{
-    padding: 6px;
+    padding: 6px 0;
 }
-ul li:nth-child(odd){background:rgba(153,153,153,0.2)}
