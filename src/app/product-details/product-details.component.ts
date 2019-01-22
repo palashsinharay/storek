@@ -17,7 +17,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.pid = params.get('pid');
-      this.item = this.products.find(t => t.id == this.pid);
+      this.item = this.products.find(obj => obj.id == this.pid);
       // console.log(this.pid);
       // console.log(this.item);
     });

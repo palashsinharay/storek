@@ -11,6 +11,7 @@ export class ProductSubCatComponent implements OnInit {
 
   products;
   subcat;
+  filterProducts;
   constructor(private route: ActivatedRoute) {
   this.products = JSON.parse(localStorage.getItem('product'));
   }
@@ -18,6 +19,8 @@ export class ProductSubCatComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.subcat = params.get('subcat');
+      this.filterProducts = this.products.filter(obj => obj.subCategory == this.subcat);
+      console.log(this.filterProducts);
     });
   }
 

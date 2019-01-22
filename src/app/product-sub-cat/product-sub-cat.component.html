@@ -4,7 +4,7 @@
     <img src="../../assets/logo.png" alt=""/>
   </div>
   <ul>
-    <li *ngFor="let item of products">
+    <li *ngFor="let item of filterProducts">
       <a *ngIf="item.subCategory == subcat" [routerLink]="'/productdetails/'+item.id">{{item.productName}}</a>
       <a *ngIf="item.subCategory == subcat" [routerLink]="'/editproduct/'+item.id" class="edit">[edit]</a>
     </li>
