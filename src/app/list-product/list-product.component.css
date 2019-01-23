@@ -52,3 +52,15 @@ h3{
     font-size: 16px; 
     margin-right: 6px;
 }
+.head p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #201f4e;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -1px;
+    float: right;
+}
+.head p span{
+    color: #d4603c;
+}
