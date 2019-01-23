@@ -52,15 +52,23 @@
     padding: 20px;
     -webkit-box-shadow: 0 0 15px 4px rgba(0,0,0,0.2);
     box-shadow: 0 0 15px 4px rgba(0,0,0,0.2);
+    
 }
 .home h2{font-size: 16px; margin: 18px 0 9px}
-.home img{height: 20px; margin: 0 0 2% 0;}
+.logo-powerd{position: relative;}
+.logo-powerd img{
+    height: 25px; 
+    margin: 0 0 2% 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 h1{
     font-size: 60px;
     font-weight: bolder;
     color: #201f4e;
     text-transform: uppercase;
-    margin: 10% 0 0;
+    padding: 10% 0 2%;
     letter-spacing: -1px;
 }
 h1 span{
