@@ -34,7 +34,7 @@ export class AddProductComponent implements OnInit {
       'id': this.products == null ? 1 : (this.products.length + 1),
       'productName': frmProduct.form.value.productName,
       'description':  frmProduct.form.value.description,
-      'imageUrl':  frmProduct.form.value.imageUrl,
+      'imageUrl':  frmProduct.form.value.imageUrl.split('*'),
       'price':  frmProduct.form.value.price,
       'stock':  frmProduct.form.value.stock,
       'subCategory': frmProduct.form.value.subCategory,

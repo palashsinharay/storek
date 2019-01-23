@@ -103,10 +103,10 @@
 
       <div class="col-md-6">
         <div class="form-group">
-          <label for="imageUrl">Imageurl</label>
+          <label for="imageUrl">Image urls (for multiple urls separate using *)</label>
           <input
             required
-            pattern="(https:[/][/]|http:[/][/]|www.)[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*$" 
+            
             ngModel 
             name="imageUrl" 
             #imageUrl="ngModel" 
@@ -181,7 +181,7 @@
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="!formProduct.valid">Add</button>
     <p>
-      {{formProduct.value | json}}
+      <!-- {{formProduct.value | json}} -->
     </p>
   </form>
 </div>
