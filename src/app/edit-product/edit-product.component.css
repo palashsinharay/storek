@@ -33,3 +33,8 @@
 .head p span{
     color: #d4603c;
 }
+label span{
+    font-size: 14px; 
+    color: #d4603c;
+    font-style: italic;
+}
