@@ -8,7 +8,30 @@
   <div class="row">
     <div class="col-md-4">
       <div class="image-pan">
-        <img [src]="item.imageUrl" class="img-responsive" />
+        <!-- <img [src]="item.imageUrl" class="img-responsive" /> -->
+        <div class="image-gal">
+          <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+            <div class="pRelative">
+              <div class="carousel-inner" >
+                <div class="carousel-item active"  *ngFor="let image of item.imageUrl;let i = index" [ngClass]="{active: i == 0}">
+                  <img class="d-block w-100" [src]="image" alt="First slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        
+            <ol class="carousel-indicators">
+              <li *ngFor="let image of item.imageUrl;let i = index" data-target="#galleryCarousel" [attr.data-slide-to]="i" [ngClass]="{active: i == 0}" ><img class="d-block w-100" [src]="image" alt="Third slide"></li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-8">
