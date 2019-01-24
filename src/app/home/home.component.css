@@ -89,6 +89,6 @@ h1 span{
     width: 300px;
     margin: 0 auto;
 }
-@media screen and(max-width: 768px){
+@media screen and (max-width: 768px){
     .laptop{display: none;}
 }
